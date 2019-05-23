@@ -34,7 +34,6 @@ app.intent('Get Signin Intent', async (conv, params, signin) => {
     sendMessageToUser(conv, messages)
   
   }
-
 });
 
 app.intent("Default Welcome Intent", async (conv, params, signin) => { 
@@ -47,7 +46,6 @@ app.intent("Default Welcome Intent", async (conv, params, signin) => {
       messages = await IntentHandler.handlers(conv, userData.context)
       sendMessageToUser(conv, messages)
   }
-
 });
 
 app.intent("Asks Mortgage Value Intent", async (conv, params, signin) => { 
@@ -116,7 +114,6 @@ app.intent("Confirmation Intent", async (conv, params, confirmationGranted) => {
         conv.ask(new Confirmation(messages)) 
       
     }
-
 });
 
 app.intent("Default Fallback Intent", async (conv, params, signin) => { 

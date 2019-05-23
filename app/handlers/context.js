@@ -9,7 +9,7 @@ exports.handle = async (conv, context, params) => {
         userData = await UserCtrl.updateUser({ _id: userData._id, data: { context: 'welcome' } })
 
     }
-    else if (context == 'welcome') {
+    else if (context == 'welcome') { 
         if(conv.intent == "Asks Mortgage Value Intent") {
         	messages = await Response['askMortgage'](conv)
             userData = await UserCtrl.updateUser({ _id: userData._id, data: { context: 'askMortgage' } })
